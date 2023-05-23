@@ -38,7 +38,10 @@ const ExpenseTracker = ({ onTrue, onClose }: Props) => {
     const finalItem = { payeeName, product, price, setDate };
     const data = await postNewItem(finalItem);
     console.log(data);
-    onTrue(data);
+    //Added onTrue Function
+      onTrue=async (data) => {
+      alert("Data has been added.")
+      onTrue(data);
   };
 
   return (
